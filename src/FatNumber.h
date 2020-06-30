@@ -21,7 +21,12 @@ public:
 	void print() const;
 
 	FatNumber& operator+=(const FatNumber& num);
+	FatNumber& operator++();
+	FatNumber operator++(int a);
+	FatNumber& operator*=(const FatNumber& num);
 	FatNumber& operator=(const FatNumber& num);
+
+	friend FatNumber operator+(const FatNumber& a, const FatNumber& b);
 
 	friend bool operator<(const FatNumber& left, const FatNumber& right);
 	friend bool operator>(const FatNumber& left, const FatNumber& right);
